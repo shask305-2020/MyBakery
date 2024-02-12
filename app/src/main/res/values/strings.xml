@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Моя пекарня</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Откройте навигационный блок</string>
+    <string name="navigation_drawer_close">Закройте навигационный блок</string>
     <string name="nav_header_title">Моя пекарня</string>
     <string name="nav_header_subtitle">v.0.0.1</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_desc">Заголовок навигации</string>
     <string name="action_settings">Настройки</string>
 
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Галерея</string>
+    <string name="menu_slideshow">Слайдшоу</string>
 
     <string name="menu_home">Создание заявки</string>
     <string name="menu_new_order">Новая заявка</string>
