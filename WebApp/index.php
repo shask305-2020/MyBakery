@@ -16,7 +16,6 @@ if (isset($_GET['op'])) {
         case 'addclient':
             if(isset($_POST['client']) && $_POST['client'] != "" ){
                 $db = new dboperation();
-                echo "addclient";
                 if($db->addClient($_POST['client'])){
                     $response['error'] = false;
                     $response['message'] = 'Клиент добавлен успешно.';
@@ -31,6 +30,15 @@ if (isset($_GET['op'])) {
             }
         break;
 
+        case 'getclient':
+            $db = new dboperation();
+            if($result = $db->getClient()){
+                while ($row = $result->fetch_assoc()) {
+                    $response[] = $row;
+                }
+            }
+        break;
+
         default:
                  $response['error'] = true;
                  $response['message'] = 'Нет операции для выполнения';
@@ -41,4 +49,4 @@ if (isset($_GET['op'])) {
 }
 
 //Отобразить данные в JSON
-echo json_encode($response);
+echo json_encode($response, JSON_UNESCAPED_UNICODE);

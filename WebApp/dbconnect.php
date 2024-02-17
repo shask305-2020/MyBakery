@@ -13,12 +13,10 @@ class dbconnect {
 
         // подключаемся к серверу
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-        echo "Установлено подключение к базе данных";
         if($conn->connect_error){
             die("Ошибка: " . $conn->connect_error);
             return null;
         }
-        echo "Подключение успешно установлено";
         return $this->conn;
     }
 

@@ -23,10 +23,18 @@ class dboperation {
 
         if($stmt->execute())
         {
-            echo "Операция выполнена";
             return true;
         }
         return false;
+    }
+
+    // Получение списка клиентов
+    public function getClient() {
+        $sql = "SELECT * FROM `clients`";
+        if ($result = $this->conn->query($sql)) {
+            return $result;
+        }
+        return $result;
     }
 }
 
